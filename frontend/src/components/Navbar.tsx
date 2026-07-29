@@ -20,14 +20,9 @@ function Navbar() {
           : 'sticky top-0 z-10 border-b border-neutral-200 bg-white'
       }
     >
-      <nav className="mx-auto max-w-5xl px-4 sm:px-6">
-        <ul
-          className={
-            isHome
-              ? 'hidden items-center justify-center gap-8 py-5 md:flex'
-              : 'hidden items-center gap-1 py-4 md:flex'
-          }
-        >
+      <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* Desktop — same layout on every page */}
+        <ul className="hidden items-center justify-center gap-8 py-4 md:flex">
           {links.map((link) => (
             <li key={link.to}>
               <NavLink
@@ -42,10 +37,10 @@ function Navbar() {
                           : 'border-transparent hover:border-white/50',
                       ].join(' ')
                     : [
-                        'rounded-md px-3 py-2 text-sm',
+                        'border-b-2 pb-1 text-sm font-medium',
                         isActive
-                          ? 'bg-neutral-100 font-medium text-neutral-900'
-                          : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900',
+                          ? 'border-neutral-900 text-neutral-900'
+                          : 'border-transparent text-neutral-600 hover:text-neutral-900',
                       ].join(' ')
                 }
               >
@@ -55,6 +50,7 @@ function Navbar() {
           ))}
         </ul>
 
+        {/* Mobile — same layout on every page */}
         <ul
           className={
             isHome
