@@ -40,8 +40,10 @@ body {
 
 .hero-left-frost {
   width: 40%;
+  /* Strong frosted left strip (non-mobile) */
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.08);
   -webkit-mask-image: linear-gradient(to right, black 0%, black 70%, transparent 100%);
   mask-image: linear-gradient(to right, black 0%, black 70%, transparent 100%);
 }
