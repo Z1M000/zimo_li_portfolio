@@ -1,2 +1,3 @@
-# zimo_li_portfolio
-portfolio website for Zimo Li
+# Zimo Li Portfolio
+
+Personal portfolio website.
