@@ -41,16 +41,23 @@ const highlights = [
 
 function Home() {
   return (
-    <section className="hero-background relative flex min-h-screen flex-col overflow-hidden bg-cover bg-center text-white">
+    <section className="relative flex min-h-screen flex-col overflow-hidden text-white">
+      {/* Mobile-only: blurred atmospheric background (do not blur content) */}
+      <div
+        aria-hidden="true"
+        className="home-mobile-blur-bg fixed inset-0 z-[0] pointer-events-none"
+      />
+
       {/* Frosted left strip — blurs the parent background, no duplicate image */}
       <div
         aria-hidden="true"
-        className="hero-left-frost pointer-events-none absolute inset-y-0 left-0 z-[1]"
+        className="hero-left-frost pointer-events-none absolute inset-y-0 left-0 z-[1] hidden sm:block"
       />
 
-      <div className="hero-overlay absolute inset-0 z-[2]" />
+      <div className="hero-overlay absolute inset-0 z-[2] hidden sm:block" />
+      <div className="hero-overlay-mobile fixed inset-0 z-[2]" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 pb-6 pt-24 sm:px-6 md:pt-28 lg:px-8">
+      <div className="page-transition-fade relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 pb-6 pt-[calc(env(safe-area-inset-top)+24px)] sm:px-6 md:pt-28 lg:px-8">
         <div className="flex flex-1 flex-col justify-center py-8 md:py-12">
           <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg">
             <p className="text-xs font-semibold tracking-[0.22em] text-white sm:text-sm">
@@ -78,7 +85,7 @@ function Home() {
               Li
             </h1>
 
-            <p className="mt-5 text-base font-medium text-white sm:text-lg md:text-xl">
+            <p className="mt-4 text-base font-medium text-white sm:mt-5 sm:text-lg md:text-xl">
               Computer Science Student @ Emory
             </p>
 
@@ -86,6 +93,13 @@ function Home() {
               Passionate about building software, conducting research, and
               creating impactful solutions.
             </p>
+
+            <img
+              src="/hero_bg_original.jpg"
+              alt=""
+              aria-hidden="true"
+              className="home-foreground-photo mt-6"
+            />
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
@@ -106,7 +120,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="mb-2 rounded-2xl border border-white/20 bg-black/40 px-4 py-5 backdrop-blur-md sm:px-6">
+        <div className="mb-8 rounded-2xl border border-white/20 bg-black/40 px-4 py-5 backdrop-blur-0 sm:backdrop-blur-md sm:px-6">
           <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {highlights.map((item) => (
               <li key={item.title} className="flex items-center gap-3">
@@ -124,11 +138,6 @@ function Home() {
           </ul>
         </div>
 
-        <div className="flex justify-center py-3 text-white/80" aria-hidden="true">
-          <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path d="m6 9 6 6 6-6" />
-          </svg>
-        </div>
       </div>
     </section>
   )

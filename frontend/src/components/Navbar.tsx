@@ -16,12 +16,11 @@ function Navbar() {
     <header
       className={
         isHome
-          ? 'absolute inset-x-0 top-0 z-20'
-          : 'sticky top-0 z-10 border-b border-neutral-200 bg-white'
+          ? 'sticky top-0 z-20 sm:absolute sm:inset-x-0 sm:top-0'
+          : 'sticky top-0 z-20 border-b border-white/40 bg-[rgba(247,241,230,0.72)] backdrop-blur-md'
       }
     >
       <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Desktop — same layout on every page */}
         <ul className="hidden items-center justify-center gap-8 py-4 md:flex">
           {links.map((link) => (
             <li key={link.to}>
@@ -37,10 +36,10 @@ function Navbar() {
                           : 'border-transparent hover:border-white/50',
                       ].join(' ')
                     : [
-                        'border-b-2 pb-1 text-sm font-medium',
+                        'border-b-2 pb-1 text-sm font-medium text-[var(--wood)]',
                         isActive
-                          ? 'border-neutral-900 text-neutral-900'
-                          : 'border-transparent text-neutral-600 hover:text-neutral-900',
+                          ? 'border-yellow-400'
+                          : 'border-transparent hover:border-[var(--olive)]/50',
                       ].join(' ')
                 }
               >
@@ -50,12 +49,11 @@ function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile — same layout on every page */}
         <ul
           className={
             isHome
               ? '-mx-4 flex bg-black/30 md:hidden'
-              : '-mx-4 flex md:hidden'
+              : '-mx-4 flex border-t border-[var(--wood)]/10 md:hidden'
           }
         >
           {links.map((link) => (
@@ -72,10 +70,10 @@ function Navbar() {
                           : 'border-b-2 border-transparent',
                       ].join(' ')
                     : [
-                        'flex items-center justify-center px-1 py-3 text-center text-xs',
+                        'flex items-center justify-center px-1 py-3 text-center text-xs text-[var(--wood)]',
                         isActive
-                          ? 'border-b-2 border-neutral-900 font-medium text-neutral-900'
-                          : 'border-b-2 border-transparent text-neutral-500',
+                          ? 'border-b-2 border-yellow-400 font-medium'
+                          : 'border-b-2 border-transparent',
                       ].join(' ')
                 }
               >

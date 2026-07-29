@@ -1,30 +1,45 @@
 @import "tailwindcss";
 
+:root {
+  --cream: #f7f1e6;
+  --cream-soft: rgba(255, 252, 245, 0.85);
+  --gold: #c9a227;
+  --gold-soft: rgba(201, 162, 39, 0.22);
+  --olive: #3f5230;
+  --wood: #1f120c;
+  --wood-muted: rgba(31, 18, 12, 0.88);
+}
+
 body {
   margin: 0;
   min-width: 320px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #171717;
-  background-color: #ffffff;
+  color: var(--wood);
+  background-color: #0f1a0f;
 }
 
 #root {
   min-height: 100vh;
 }
 
-.hero-background {
+.page-title {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.site-background {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
   background-image: url('/hero_bg.jpg');
   background-size: cover;
   background-position: center;
 }
 
-/*
-  Blur the left 25% of the SAME background — no second image.
-  backdrop-filter blurs whatever is painted behind this overlay.
-*/
 .hero-left-frost {
   width: 40%;
-  /* background: rgba(0, 0, 0, 0.2); */
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(20px);
   -webkit-mask-image: linear-gradient(to right, black 0%, black 70%, transparent 100%);
@@ -41,7 +56,73 @@ body {
   );
 }
 
+/* Mobile hero: keep the background face unobstructed */
+.hero-overlay-mobile {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hero-portrait {
+  height: clamp(220px, 38vh, 360px);
+}
+
+/* Mobile-only: strong blurred atmospheric background layer */
+.home-mobile-blur-bg {
+  background-image: url('/hero_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px);
+  transform: scale(1.08);
+  transform-origin: center;
+}
+
+/* Mobile-only: premium floating foreground photo */
+.home-foreground-photo {
+  width: min(92%, 620px);
+  height: auto;
+  margin-inline: auto;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  display: block;
+  object-fit: contain;
+}
+
+
+/* Non-home pages: immersive golf course background */
+.page-shell {
+  position: relative;
+  isolation: isolate;
+  color: var(--wood);
+}
+
+.page-shell::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    165deg,
+    rgba(247, 241, 230, 0.62) 0%,
+    rgba(95, 115, 70, 0.28) 48%,
+    rgba(30, 40, 22, 0.42) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-card {
+  background: var(--cream-soft);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 32px rgba(40, 30, 10, 0.14);
+}
+
 @media (max-width: 767px) {
+  .home-layout .site-background {
+    display: none;
+  }
+
   .hero-left-frost {
     width: 40%;
     backdrop-filter: blur(14px);
@@ -50,5 +131,36 @@ body {
 
   .hero-overlay {
     background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home-layout .site-background {
+    background-position: 10% center;
+  }
+}
+
+/* Ensure mobile blur + floating foreground photo are strictly mobile-only */
+@media (min-width: 768px) {
+  .home-layout .home-mobile-blur-bg,
+  .home-layout .hero-overlay-mobile,
+  .home-layout .home-foreground-photo {
+    display: none;
+  }
+}
+
+/* Simple page transition on route switch */
+.page-transition-fade {
+  animation: pageFadeIn 220ms ease-out;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -7,10 +7,23 @@ function Layout() {
   const isHome = pathname === '/'
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div
+      className={
+        isHome
+          ? 'home-layout relative flex min-h-screen flex-col'
+          : 'page-shell flex min-h-screen flex-col'
+      }
+    >
+      <div aria-hidden="true" className="site-background" />
       <Navbar />
       <main className="flex-1">
-        <Outlet />
+        {isHome ? (
+          <Outlet />
+        ) : (
+          <div key={pathname} className="page-transition-fade">
+            <Outlet />
+          </div>
+        )}
       </main>
       {isHome ? null : <Footer />}
     </div>

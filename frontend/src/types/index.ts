@@ -14,6 +14,7 @@ export interface Project {
   role: string
   dateRange: string
   description: string
+  image: string
   technologies: string[]
   overviewUrl?: string
   liveSiteUrl?: string
