@@ -37,6 +37,8 @@ body {
   background-image: url('/hero_bg.jpg');
   background-size: cover;
   background-position: center;
+  transform: scale(1.02);
+  transform-origin: center;
 }
 
 .hero-left-frost {
@@ -107,7 +109,7 @@ body {
   background-position: center;
   filter: blur(10px);
   -webkit-filter: blur(10px);
-  transform: scale(1.05);
+  transform: scale(1.02);
   transform-origin: center;
   pointer-events: none;
 }
