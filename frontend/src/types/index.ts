@@ -26,6 +26,9 @@ export interface ContactInfo {
   message: string
   phone: string
   email: string
+  location: string
   linkedInUrl: string
   githubUrl: string
+  availableLabel: string
+  availableFor: string
 }

@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: '1',
     title: 'Emory Women’s Golf Web',
-    role: 'Project Lead, Full-Stack Developer',
+    role: 'Project Lead • Full-Stack Developer',
     dateRange: 'Nov 2025 – Present',
     description:
       'A full-stack platform that manages the Emory Women’s Golf points game, activities, and rewards.',
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     id: '2',
     title: 'Customer Churn Prediction & Retention Analytics',
-    role: 'Project Lead, Machine Learning Engineer',
+    role: 'Project Lead • Machine Learning Engineer',
     dateRange: 'Jan 2026 – Apr 2026',
     description:
       'An end-to-end machine learning project for predicting telecom customer churn and improving customer retention.',
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     id: '3',
     title: 'DooleyHelpz',
-    role: 'Database Lead, Backend Developer',
+    role: 'Database Lead • Backend Developer',
     dateRange: 'Aug 2025 – Dec 2025',
     description:
       'A course planning platform that automatically generates personalized semester schedules for Emory CS students.',

@@ -2,7 +2,25 @@ import { Link } from 'react-router-dom'
 
 const highlights = [
   {
-    title: 'NCAA DIII Champion',
+    title: 'Full-Stack Developer',
+    subtitle: 'Building for real users',
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="m8 8-4 4 4 4M16 8l4 4-4 4M13 5l-2 14" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Computer Science',
+    subtitle: '4.0 GPA · Math Minor',
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+        <path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm0 13.2L4.5 12 12 8l7.5 4-7.5 4.2Z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'NCAA DIII Team Champion',
     subtitle: '2025 & 2026',
     icon: (
       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
@@ -11,29 +29,11 @@ const highlights = [
     ),
   },
   {
-    title: 'Player of the Year',
+    title: 'NCAA DIII Player of the Year',
     subtitle: '2026',
     icon: (
       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
         <path d="m12 2.5 2.7 5.5 6 .9-4.4 4.2 1 5.9L12 16.2 6.7 19l1-5.9L3.3 8.9l6-.9L12 2.5Z" />
-      </svg>
-    ),
-  },
-  {
-    title: '4.0 GPA',
-    subtitle: 'Computer Science',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
-        <path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm0 13.2L4.5 12 12 8l7.5 4-7.5 4.2Z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Full-Stack Developer',
-    subtitle: 'Building impactful solutions',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="m8 8-4 4 4 4M16 8l4 4-4 4M13 5l-2 14" />
       </svg>
     ),
   },
@@ -86,12 +86,13 @@ function Home() {
             </h1>
 
             <p className="mt-4 text-base font-medium text-white sm:mt-5 sm:text-lg md:text-xl">
-              Computer Science Student @ Emory
+              Software Engineer • NCAA Golfer
             </p>
 
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/90 sm:text-base">
-              Passionate about building software, conducting research, and
-              creating impactful solutions.
+              Building user-centered full-stack applications.
+              <br />
+              CS student & NCAA student-athlete at Emory University.
             </p>
 
             <img

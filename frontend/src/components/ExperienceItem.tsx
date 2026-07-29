@@ -23,7 +23,7 @@ function ExperienceItem({ experience }: ExperienceItemProps) {
         <h2 className="mt-1 text-xl font-semibold tracking-tight text-[var(--wood)] sm:text-2xl drop-shadow-[0_0_7px_rgba(250,204,21,0.35)]">
           {experience.role}
         </h2>
-        <p className="mt-1 text-base text-[var(--wood-muted)] sm:text-lg">
+        <p className="mt-1 text-base text-[#425715] sm:text-lg">
           <span className="block sm:inline">{experience.organization}</span>
           <span className="hidden sm:inline"> · </span>
           <span className="block sm:inline">{experience.location}</span>
@@ -35,11 +35,11 @@ function ExperienceItem({ experience }: ExperienceItemProps) {
           ))}
         </ul>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap gap-1.5">
           {experience.technologies.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-[var(--gold)]/25 bg-[var(--gold-soft)] px-2.5 py-1 text-xs text-[var(--wood)] sm:text-sm"
+              className="rounded-full border border-[var(--wood)]/10 bg-[rgba(31,18,12,0.04)] px-2 py-0.5 text-[11px] text-[var(--wood)]/65 sm:text-xs"
             >
               {tech}
             </span>

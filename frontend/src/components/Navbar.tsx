@@ -30,13 +30,13 @@ function Navbar() {
                 className={({ isActive }) =>
                   isHome
                     ? [
-                        'border-b-2 pb-1 text-sm font-medium text-white',
+                        'border-b-2 pb-1 text-sm font-medium text-white lg:text-base',
                         isActive
                           ? 'border-yellow-400'
                           : 'border-transparent hover:border-white/50',
                       ].join(' ')
                     : [
-                        'border-b-2 pb-1 text-sm font-medium text-[var(--wood)]',
+                        'border-b-2 pb-1 text-sm font-medium text-[var(--wood)] lg:text-base',
                         isActive
                           ? 'border-yellow-400'
                           : 'border-transparent hover:border-[var(--olive)]/50',
