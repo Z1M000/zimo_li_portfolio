@@ -8,7 +8,7 @@ function Resume() {
     <PageContainer>
       <PageHeader title="Resume" />
 
-      <div className="mb-6 flex gap-3 sm:flex-row sm:flex-wrap">
+      <div className="mb-10 flex gap-3 sm:flex-row sm:flex-wrap">
         <a
           href={RESUME_PATH}
           target="_blank"
@@ -26,9 +26,6 @@ function Resume() {
         </a>
       </div>
 
-      <h2 className="mb-3 pl-2 text-base font-medium text-[var(--wood)]">
-        Preview
-      </h2>
       <div className="glass-card overflow-hidden rounded-2xl">
         <iframe
           title="Resume preview"

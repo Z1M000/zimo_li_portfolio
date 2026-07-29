@@ -91,23 +91,36 @@ body {
 /* Non-home pages: immersive golf course background */
 .page-shell {
   position: relative;
-  isolation: isolate;
   color: var(--wood);
 }
 
-.page-shell::after {
-  content: "";
+/* Blurred background image layer (real DOM element, avoids pseudo-element z-index issues) */
+.page-blur-bg {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
+  background-image: url('/hero_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  transform: scale(1.05);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+/* Tinted gradient overlay */
+.page-tint-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
   background: linear-gradient(
     165deg,
     rgba(247, 241, 230, 0.62) 0%,
     rgba(95, 115, 70, 0.28) 48%,
     rgba(30, 40, 22, 0.42) 100%
   );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  pointer-events: none;
 }
 
 .glass-card {

@@ -15,8 +15,14 @@ function Layout() {
       }
     >
       <div aria-hidden="true" className="site-background" />
+      {!isHome && (
+        <>
+          <div aria-hidden="true" className="page-blur-bg" />
+          <div aria-hidden="true" className="page-tint-overlay" />
+        </>
+      )}
       <Navbar />
-      <main className="flex-1">
+      <main className={isHome ? 'flex-1' : 'relative z-[2] flex-1'}>
         {isHome ? (
           <Outlet />
         ) : (
@@ -25,7 +31,7 @@ function Layout() {
           </div>
         )}
       </main>
-      {isHome ? null : <Footer />}
+      {isHome ? null : <div className="relative z-[2]"><Footer /></div>}
     </div>
   )
 }
