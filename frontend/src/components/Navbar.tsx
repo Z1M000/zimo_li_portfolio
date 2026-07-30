@@ -16,7 +16,7 @@ function Navbar() {
     <header
       className={
         isHome
-          ? 'sticky top-0 z-20 sm:absolute sm:inset-x-0 sm:top-0'
+          ? 'sticky top-0 z-20 bg-black/30 sm:absolute sm:inset-x-0 sm:top-0'
           : 'sticky top-0 z-20 border-b border-white/40 bg-[rgba(247,241,230,0.72)] backdrop-blur-md'
       }
     >
@@ -52,7 +52,7 @@ function Navbar() {
         <ul
           className={
             isHome
-              ? '-mx-4 flex bg-black/30 md:hidden'
+              ? '-mx-4 flex md:hidden'
               : '-mx-4 flex border-t border-[var(--wood)]/10 md:hidden'
           }
         >
