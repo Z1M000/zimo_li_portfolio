@@ -46,7 +46,7 @@ export const projects: Project[] = [
       'A course planning platform that automatically generates personalized semester schedules for Emory CS students.',
     image: '/projects/dooleyhelpz.jpg',
     technologies: ['Python', 'MongoDB'],
-    demoUrl: 'https://www.youtube.com/watch?v=Lw8Dgwb5xEs&t=6s',
+    demoUrl: 'https://www.youtube.com/watch?v=Lw8Dgwb5xEs',
     githubUrl: 'https://github.com/MarcoGuzBal/DooleyHelpz',
   },
 ]
