@@ -8,8 +8,8 @@ export const experiences: Experience[] = [
     organization: 'Emory University',
     location: 'Remote',
     bullets: [
-      'Integrate and validate 5 open-source clone detectors to benchmark repository-level LLM-generated code rewrites using Linux and Docker',
-      'Standardize detector interfaces and evaluation workflows within a common benchmarking pipeline',
+      'Integrate and validate five open-source code clone detectors in Linux and Docker environments to benchmark their performance on repository-level, LLM-rewritten code',
+      'Standardize clone detector interfaces and evaluation workflows within a common benchmarking pipeline',
     ],
     technologies: ['Python', 'Java', 'Docker', 'Git', 'Linux', 'AWS'],
   },
@@ -32,10 +32,10 @@ export const experiences: Experience[] = [
     organization: 'Emory University',
     location: 'Remote',
     bullets: [
-      'Implemented ingestion pipelines for ~250M academic papers and extracted multi-source citation data to support an AI-powered literature review platform',
-      'Developed LLM-based benchmarks leveraging Gemini-generated reference answers to compare retrieval strategies for paper discovery and summarization',
+      'Extracted multi-source citation data using API and batch retrieval strategies and implemented ingestion pipelines for ~250M academic papers to support an AI-powered literature review platform',
+      'Created Retrieval-Augmented Generation (RAG) evaluation ground truth with Gemini by selecting the most relevant references from each paper’s cited works based on its title and abstract',
       'Automated the download, conversion, and upload of 20K+ medical imaging samples from CT-RATE into the M3D format for downstream AI medical research',
     ],
-    technologies: ['Python', 'REST APIs', 'LanceDB', 'Hugging Face'],
+    technologies: ['Python', 'REST APIs', 'Gemini API', 'LanceDB', 'Hugging Face'],
   },
 ]
