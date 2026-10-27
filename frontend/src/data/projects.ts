@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: '1',
     title: 'Emory Women’s Golf Web',
     role: 'Project Lead • Full-Stack Developer',
-    dateRange: 'Nov 2025 – Present',
+    dateRange: 'Nov 2025 – Sep 2026',
     description:
       'A full-stack platform that manages the Emory Women’s Golf points game, activities, and rewards.',
     image: '/projects/emory-womens-golf-website.jpg',
