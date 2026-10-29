@@ -57,7 +57,7 @@ export const experiences: Experience[] = [
     bullets: [
       'Implemented paper ingestion pipelines for a ~250M-paper AI-powered literature review platform',
       'Integrated OpenAlex, Crossref, and Semantic Scholar APIs to extract citation metadata for citation graph construction',
-      'Optimized Semantic Scholar API retrieval with batch requests, reducing HTTP requests by 98.7% (451 → 6) and observed runtime by 99.9% (40.1 min → 3.21s) while improving paper completion from 60% to 100% in a 5-paper live run',
+      'Optimized Semantic Scholar API retrieval with batch requests, reducing HTTP requests by 98.7% (451 → 6) and observed runtime by 99.9% (40.1 min → 3.21s) while improving paper processing success rate from 60% to 100% in a 5-paper live run',
       'Automated Gemini prompt construction, structured output generation, and DOI mapping to build ground truth for benchmarking RAG retrieval methods',
     ],
     technologies: ['Python', 'REST APIs', 'Gemini API', 'LanceDB'],
