@@ -1,7 +1,7 @@
 import PageContainer from '../components/PageContainer'
 import PageHeader from '../components/PageHeader'
 
-const RESUME_PATH = '/Zimo_Li_Resume.pdf'
+const RESUME_PATH = '/Zimo_Li_Resume%20(26.10.29).pdf'
 
 function Resume() {
   return (
