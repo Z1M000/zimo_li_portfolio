@@ -8,9 +8,8 @@ export const experiences: Experience[] = [
     organization: 'Tuilink',
     location: 'Remote',
     bullets: [
-      'Developing two LangGraph multi-agent services: AI Auto Reply and JD–Resume Matcher, owning design, delivery, and deployment',
-      'Designing structured communication between AI agents using Pydantic models and stateless JSON workflows, while implementing caching to reduce debugging time and OpenAI token costs',
-      'Building serverless AWS infrastructure using AWS CDK, enabling one-command provisioning and deployments',
+      'Developing two LangGraph multi-agent services: AI Auto Reply and JD–Resume Matcher',
+      'Designing structured communication between AI agents using Pydantic models and stateless JSON workflows to reduce debugging time and OpenAI token costs',
     ],
     technologies: [
       'Python',
